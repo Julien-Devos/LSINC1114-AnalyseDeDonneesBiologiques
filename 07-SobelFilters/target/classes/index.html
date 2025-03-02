@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Set blank favicon -->
+    
+    <title>Sobel filters</title>
+    <style>
+      html, body {
+          width: 100%;
+          height: 100%;
+          margin: 0px;
+          border: 0;
+          overflow: hidden; /*  Disable scrollbars */
+          display: block;  /* No floating content on sides */
+      }
+
+      #menu {
+          position: absolute;
+          left: 0%;
+          top: 0%;
+          width: 100%;
+          height: 6em;  /* Height of 6 lines of text */
+          background-color: lightgray;
+      }
+
+      #display {
+          position: absolute;
+          left: 0%;
+          top: 6em;
+          width: 100%;
+          bottom: 0px;
+          background-color: black;
+      }
+      
+      #topLeft {
+          position: absolute;
+          left: 0%;
+          top: 0%;
+          width: 50%;
+          bottom: 50%;
+      }
+      
+      #topRight {
+          position: absolute;
+          left: 50%;
+          top: 0%;
+          width: 50%;
+          bottom: 50%;
+      }
+      
+      #bottomLeft {
+          position: absolute;
+          left: 0%;
+          top: 50%;
+          width: 50%;
+          bottom: 0%;
+      }
+      
+      #bottomRight {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 50%;
+          bottom: 0%;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="menu">
+      <p align="center">
+        <b>Sobel filters</b>
+      </p>
+      
+      <p align="center">
+        <input id="dicom-input" type="file" />
+      </p>
+    </div>
+
+    <div id="display">
+      <div id="topLeft" class="container">
+        <canvas></canvas>
+      </div>
+      
+      <div id="topRight" class="container">
+        <canvas></canvas>
+      </div>
+      
+      <div id="bottomLeft" class="container">
+        <canvas></canvas>
+      </div>
+      
+      <div id="bottomRight" class="container">
+        <canvas></canvas>
+      </div>
+    </div>
+        
+    <script src="axios.min.js"></script>
+
+    <!-- UCLouvain libraries -->
+    <script src="BestRendering.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

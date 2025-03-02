@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Set blank favicon -->
+
+    <title>Physics computations</title>
+  </head>
+  
+  <body>
+    <h1>Physics computations</h1>
+
+    <h2>Exercise 1: Conversions from degrees Celsius</h2>
+
+    <p>Celsius: <input id="celsius" value="20"> [&deg;C]</p>
+    <p><button id="convert-celsius">Execute</button></p>
+    <p>Fahrenheit: <span id="fahrenheit">?</span> [&deg;F]</p>
+    <p>Kelvin: <span id="kelvin">?</span> [K]</p>
+
+    <hr>
+
+    <h2>Exercise 2: Electricity computations</h2>
+
+    <p>
+      Given any pair of values, this tool must
+      combine <a href="https://en.wikipedia.org/wiki/Ohm%27s_law"
+      target="_blank">Ohm's law</a>
+      with <a href="https://en.wikipedia.org/wiki/Electric_power#Resistive_circuits"
+      target="_blank">electric power</a> dissipated in resistive
+      circuits to compute the two missing values.
+    </p>
+    
+    <p>V = Voltage: <input id="voltage" value=""> [V]</p>
+    <p>R = Resistance: <input id="resistance" value=""> [&#8486;]</p>
+    <p>I = Current: <input id="current" value=""> [A]</p>
+    <p>P = Electric power: <input id="power" value=""> [W]</p>
+    
+    <p><button id="compute-electricity">Compute missing values</button></p>
+    <p><button id="clear-electricity">Clear</button></p>
+
+    <!-- Third-party libraries -->
+    <script src="axios.min.js"></script>
+
+    <!-- UCLouvain libraries -->
+    <script src="app.js"></script>
+  </body>
+</html>

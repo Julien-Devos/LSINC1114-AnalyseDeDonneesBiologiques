@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Set blank favicon -->
+
+    <title>Compute power spectrum</title>
+    <style>
+      html, body {
+          width: 100%;
+          height: 100%;
+          margin: 0px;
+          border: 0;
+          overflow: hidden; /*  Disable scrollbars */
+          display: block;  /* No floating content on sides */
+      }
+
+      #menu {
+          position: absolute;
+          left: 0%;
+          top: 0%;
+          width: 100%;
+          height: 8em;  /* Height of 8 lines of text */
+          background-color: lightgray;
+      }
+      
+      #display {
+          position: absolute;
+          left: 0%;
+          top: 8em;
+          width: 100%;
+          bottom: 0px;
+          background-color: white;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="menu">
+      <p align="center">
+        <b>Compute power spectrum from EDF file</b>
+      </p>
+      
+      <p align="center">
+        <input id="input-upload" type="file" />
+      </p>
+
+      <p align="center">
+        <select id="channels">
+        </select>
+      </p>
+    </div>
+    
+    <div id="display" class="container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Third-party libraries -->
+    <script src="axios.min.js"></script>
+    <script src="chart.js"></script>
+    <script src="hammer.min.js"></script>
+    <script src="chartjs-plugin-zoom.min.js"></script>
+
+    <!-- UCLouvain libraries -->
+    <script src="BestRendering.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
